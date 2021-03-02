@@ -79,31 +79,31 @@ body.modal-is-open {
   &:focus {
     border: 1px solid grey;
     & ~ .svg-user-icon {
-      fill: red;
+      fill: $accent-color;
     }
     & ~ .svg-phone-icon {
-      fill: red;
+      fill: $accent-color;
     }
   }
   &:not(:placeholder-shown) {
     &:invalid {
-      border: 1px solid red;
+      border: 1px solid $accent-color;
     }
     & ~ .svg-user-icon {
-      fill: red;
+      fill: $accent-color;
     }
     & ~ .svg-phone-icon {
-      fill: red;
+      fill: $accent-color;
     }
   }
 
   &:valid {
-    border: 2px solid greenyellow;
+    border: 2px solid $button-bg-color;
     & ~ .svg-user-icon {
-      fill: greenyellow;
+      fill: $button-bg-color;
     }
     & ~ .svg-phone-icon {
-      fill: greenyellow;
+      fill: $button-bg-color;
     }
   }
 }

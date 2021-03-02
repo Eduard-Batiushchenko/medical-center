@@ -2,7 +2,6 @@ const backdropRef = document.querySelector('.backdrop');
 const modalBtnRef = document.querySelectorAll('.button');
 const closeModalBtnRef = document.querySelector('.modal-close-button');
 const bodyRef = document.querySelector('body');
-const phoneInputRef = document.querySelector('.modal-form-input.phone');
 const modalFormRef = document.querySelector('.modal-form');
 const submitButtonRef = document.querySelector('.submit-form');
 const inputNameRef = document.querySelector('.modal-form-input.name');
