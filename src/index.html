@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+
     <!-- inject:css -->
     <!-- endinject -->
   </head>
@@ -17,11 +22,80 @@
   <body>
     <!-- Header -->
     //="./html/header.html"
-    <!-- Hero -->
-    //="./html/hero.html"
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      //="./html/hero.html"
+    </main>
 
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <img class="cross-img" src="./images/svg/close-icon.svg" />
+        </button>
+        <h2 class="modal-title">Введите Ваши данные</h2>
+        <form
+          class="modal-form"
+          action="edward_batyuschenko@ukr.net"
+          method="post"
+          enctype="text/plain"
+        >
+          <label class="modal-form-label">
+            Имя
+            <input
+              class="modal-form-input name"
+              type="text"
+              required
+              placeholder="Введите имя"
+              minlength="2"
+              maxlength="30"
+              pattern="[A-Za-zА-Яа-яґҐЁёІіЇїЄє'’ʼ\s-]{2,20}"
+              oninvalid="this.setCustomValidity('Имя должно содержать не менее 2 символов')"
+            />
+            <svg class="svg-user-icon">
+              <use class="user-icon" href="./images/svg/sprite.svg#user"></use>
+            </svg>
+          </label>
+
+          <label class="modal-form-label">
+            Мобильный телефон
+            <input
+              class="modal-form-input phone"
+              type="tel"
+              pattern="^3?8?(0\d{9})$"
+              minlength="12"
+              maxlength="12"
+              placeholder="380XXXXXXXXX"
+              title="Используйте числовой формат"
+              required
+              oninvalid="this.setCustomValidity('Введите номер в формате +380XXXXXXXXX.')"
+            />
+            <svg class="svg-phone-icon">
+              <use
+                class="phone-icon"
+                href="./images/svg/sprite.svg#phone"
+              ></use>
+            </svg>
+          </label>
+          <button class="submit-form button" type="submit">
+            Заказать обратный звонок
+          </button>
+        </form>
+
+        <!-- <svg width="30" height="30">
+          <use href="./images/svg/close-icon.svg"></use>
+        </svg> -->
+      </div>
+    </div>
+    <div class="pnotify-success">
+      <p class="pnotify-text">В скором времени мы вам перезвоним!</p>
+    </div>
+    <div class="pnotify-error">
+      <p class="pnotify-text">Упс...Что-то пошло не так.</p>
+    </div>
     <!-- inject:js -->
     <script src="/src/js/menu-burger.js" type="module"></script>
+    <script src="/src/js/modal.js" type="module"></script>
     <!-- endinject -->
   </body>
 </html>

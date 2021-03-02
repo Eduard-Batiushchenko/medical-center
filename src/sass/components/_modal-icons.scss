@@ -1,0 +1,13 @@
+.svg-phone-icon {
+  position: absolute;
+  top: 55%;
+  left: 4%;
+  width: 20px;
+  height: 20px;
+
+  fill: gray;
+}
+
+.svg-user-icon {
+  @extend .svg-phone-icon;
+}

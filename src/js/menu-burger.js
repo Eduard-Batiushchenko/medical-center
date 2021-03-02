@@ -5,15 +5,16 @@ if (screen.width <= 767) {
 
   hamburgerBtnRef.addEventListener('click', onToggleBurger);
   headerNavigationRef.addEventListener('click', onClickNav);
-  heroRef.addEventListener('click', onHeroClick);
 
-  function onToggleBurger(e) {
+  function onToggleBurger() {
     hamburgerBtnRef.classList.toggle('is-active');
 
     if (hamburgerBtnRef.classList.contains('is-active')) {
       headerNavigationRef.classList.add('is-open');
+      heroRef.addEventListener('click', onHeroClick);
     } else {
       headerNavigationRef.classList.remove('is-open');
+      heroRef.removeEventListener('click', onHeroClick);
     }
   }
 
@@ -25,12 +26,12 @@ if (screen.width <= 767) {
   function onClickNav(e) {
     if (e.target !== headerNavigationRef) {
       onCloseMenu();
+      heroRef.removeEventListener('click', onHeroClick);
     }
   }
 
-  function onHeroClick(e) {
-    if (e.currentTarget) {
-      onCloseMenu();
-    }
+  function onHeroClick() {
+    onCloseMenu();
+    heroRef.removeEventListener('click', onHeroClick);
   }
 }

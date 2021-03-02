@@ -1,0 +1,109 @@
+body.modal-is-open {
+  overflow: hidden;
+  position: fixed;
+  //   pointer-events: none;
+}
+
+.modal {
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  padding: 40px 40px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cross-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.submit-form.button {
+  font-size: 14px;
+  padding: 10px;
+  background-color: grey;
+  pointer-events: none;
+
+  &.is-active {
+    background-color: $button-bg-color;
+    pointer-events: inherit;
+  }
+}
+
+.modal-title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.modal-form-label {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: start;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.modal-form-input {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+
+  border-radius: 5px;
+  border: 1px solid $button-bg-color;
+  outline: none;
+
+  &:focus {
+    border: 1px solid grey;
+    & ~ .svg-user-icon {
+      fill: red;
+    }
+    & ~ .svg-phone-icon {
+      fill: red;
+    }
+  }
+  &:not(:placeholder-shown) {
+    &:invalid {
+      border: 1px solid red;
+    }
+    & ~ .svg-user-icon {
+      fill: red;
+    }
+    & ~ .svg-phone-icon {
+      fill: red;
+    }
+  }
+
+  &:valid {
+    border: 2px solid greenyellow;
+    & ~ .svg-user-icon {
+      fill: greenyellow;
+    }
+    & ~ .svg-phone-icon {
+      fill: greenyellow;
+    }
+  }
+}
