@@ -1,0 +1,22 @@
+.button {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: $button-bg-color;
+  color: $white-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  // &-details {
+  //   @extend .button;
+  //   font-size: 14px;
+  //   padding: 15px;
+  // }
+}

@@ -1,0 +1,18 @@
+.about-us {
+  // background-color: red;
+  margin-bottom: 40px;
+  text-align: center;
+  // padding-top: 40px;
+  // padding-bottom: 40px;
+}
+
+.about-us-text {
+  font-size: 16px;
+  text-align: center;
+  color: $primary-text-color;
+  margin-top: 0;
+  margin-bottom: 0;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
