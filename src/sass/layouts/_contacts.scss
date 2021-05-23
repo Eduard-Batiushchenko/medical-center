@@ -1,0 +1,54 @@
+.contacts {
+  margin-bottom: 40px;
+  background-color: $primary-bg-color;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contacts-adresses {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contacts-container {
+  position: relative;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.svg-phone-icon-contacts {
+  position: absolute;
+  top: -2%;
+  left: 11%;
+  width: 20px;
+  height: 20px;
+  fill: $button-bg-color;
+}
+
+.clinic-adress {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contacts-adress-container {
+  position: relative;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.svg-locatio-icon-contacts {
+  position: absolute;
+  top: -2%;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  fill: $button-bg-color;
+}

@@ -90,7 +90,14 @@
     & ~ .svg-phone-icon .phone-icon {
       fill: $accent-color;
     }
+    & ~ .svg-phone-icon-contacts .phone-icon {
+      fill: $accent-color;
+    }
   }
+}
+
+.phone-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-logo {
