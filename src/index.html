@@ -28,6 +28,11 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/lodash.throttle@4.1.1/index.min.js"
+    ></script>
+
     <script>
       jQuery(document).ready(function () {
         jQuery('.scrollto').click(function () {
@@ -65,6 +70,15 @@
       <!-- Contacts -->
       //="./html/contacts.html"
     </main>
+    <!-- Footer -->
+    //="./html/footer.html"
+
+    <!-- Arrow-up button -->
+    <button class="arrow-up-btn" aria-label="scroll-up-page">
+      <svg class="arrow-up">
+        <use href="./images/svg/sprite.svg#icon-arrow-up"></use>
+      </svg>
+    </button>
 
     <!-- Modal -->
     <div class="backdrop is-hidden">
