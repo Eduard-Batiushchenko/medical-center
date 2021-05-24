@@ -1,6 +1,6 @@
 const arrowUpRef = document.querySelector('.arrow-up');
 
-window.addEventListener('scroll', throttle(listArrowBtn, 200));
+window.addEventListener('scroll', _.throttle(listArrowBtn, 200));
 arrowUpRef.addEventListener('click', scrollToHeader);
 
 function scrollToHeader() {
