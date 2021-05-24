@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  padding-top: 125px;
-  padding-bottom: 125px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background-image: radial-gradient(
       circle at center,
       rgba(47, 48, 58, 0.4),
@@ -25,15 +25,14 @@
 }
 
 .hero-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
+
   text-transform: uppercase;
   color: $white-color;
+  width: 100%;
   height: 180px;
 
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }

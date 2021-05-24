@@ -48,6 +48,9 @@
 }
 
 .our-services-item {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
   &:not(:last-child) {
     margin-bottom: 20px;
   }
