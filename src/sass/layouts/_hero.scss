@@ -14,11 +14,25 @@
   margin-bottom: 40px;
 }
 
+.hero-another {
+  @extend .hero;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-another.jpg);
+}
+
 .hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: $white-color;
+  height: 180px;
 
   margin-top: 0;
   margin-bottom: 80px;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,34 @@
     />
     <script
       type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
     ></script>
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('.scrollto').click(function () {
+          elementClick = jQuery(this).attr('href');
+          destination = jQuery(elementClick).offset().top - 20;
+          jQuery('html:not(:animated),body:not(:animated)').animate(
+            { scrollTop: destination },
+            1000,
+          );
+          hamburgerBtnRef.classList.remove('is-active');
+          headerNavigationRef.classList.remove('is-open');
+          return false;
+        });
+      });
+    </script>
 
     <!-- inject:css -->
+
     <!-- endinject -->
   </head>
 
@@ -46,7 +70,11 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-close-button" type="button">
-          <img class="cross-img" src="./images/svg/close-icon.svg" />
+          <img
+            class="cross-img"
+            alt="Крестик"
+            src="./images/svg/close-icon.svg"
+          />
         </button>
         <h2 class="modal-title">Введите Ваши данные</h2>
         <form
